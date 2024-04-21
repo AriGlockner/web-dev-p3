@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aecb9898-2a76-4951-b282-215a4a9ced25" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Display.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/node.js.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/npm-publish.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web-dev-p3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web-dev-p3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DisplayPlayerData.js" beforeDir="false" afterPath="$PROJECT_DIR$/DisplayPlayerData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requestPlayerData.js" beforeDir="false" afterPath="$PROJECT_DIR$/requestPlayerData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +29,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -95,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713657838046</updated>
       <workItem from="1713657838922" duration="9422000" />
-      <workItem from="1713719834758" duration="1243000" />
+      <workItem from="1713719834758" duration="2523000" />
     </task>
     <servers />
   </component>
