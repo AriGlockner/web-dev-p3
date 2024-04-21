@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aecb9898-2a76-4951-b282-215a4a9ced25" name="Changes" comment="" />
+    <list default="true" id="aecb9898-2a76-4951-b282-215a4a9ced25" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DisplayPlayerData.js" beforeDir="false" afterPath="$PROJECT_DIR$/DisplayPlayerData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requestPlayerData.js" beforeDir="false" afterPath="$PROJECT_DIR$/requestPlayerData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,10 +24,29 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "AriGlockner"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AriGlockner/web-dev-p3.git",
+    "accountId": "af02919f-47f1-406d-9a0a-a299c5e37dd6"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2fO2Wm4GHDJMwJlFt0PURvArUC9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,6 +60,7 @@
     "Node.js.requestData.js.executor": "Run",
     "Node.js.requestPlayerData.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "21.7.3",
     "javascript.nodejs.core.library.typings.version": "20.12.7",
     "node.js.detected.package.eslint": "true",
@@ -69,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713657838046</updated>
       <workItem from="1713657838922" duration="9422000" />
-      <workItem from="1713719834758" duration="255000" />
+      <workItem from="1713719834758" duration="1243000" />
     </task>
     <servers />
   </component>

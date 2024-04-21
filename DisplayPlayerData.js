@@ -1,7 +1,7 @@
 // DisplayPlayerData.js
 
 import React, { useState } from 'react';
-import requestPlayerData from './requestPlayerData'; // Import the function to fetch player data
+import getPlayerStats from './requestPlayerData';
 
 function DisplayPlayerData() {
     const [playerData, setPlayerData] = useState([]);
