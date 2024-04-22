@@ -21,18 +21,18 @@
     <table class="table table-striped table-hover">
         <thead>
         <tr>
-            <th>Name</th>
-            <th>PA</th>
-            <th>BA</th>
-            <th>xBA</th>
-            <th>BA Diff</th>
-            <th>SLG</th>
-            <th>xSLG</th>
-            <th>SLG Diff</th>
-            <th>wOBA</th>
-            <th>xwOBA</th>
-            <th>wOBA Diff</th>
-            <th>Luck</th>
+            <th id="Name-header">Name</th>
+            <th id="PA-header">PA</th>
+            <th id="BA-header">BA</th>
+            <th id="xBA-header">xBA</th>
+            <th id="BA_diff-header">BA Diff</th>
+            <th id="SLG-header">SLG</th>
+            <th id="xSLG-header">xSLG</th>
+            <th id="SLG_diff-header">SLG Diff</th>
+            <th id="wOBA-header">wOBA</th>
+            <th id="xwOBA-header">xwOBA</th>
+            <th id="wOBA_diff-header">wOBA Diff</th>
+            <th id="luck-header">Luck</th>
         </tr>
         </thead>
         <tbody id="player-stats-body">
@@ -46,40 +46,69 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
 <script>
-    // Function to fetch player stats and populate the table
-    function fetchPlayerStats() {
-        fetch('/getPlayerStats')
-            .then(response => response.json())
-            .then(stats => {
-                const tableBody = document.getElementById('player-stats-body');
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const sortOrder = {};
 
-                tableBody.innerHTML = '';
+        // Add event listener for each header
+        Array.from(document.querySelectorAll('th')).forEach(header => {
+            const id = header.id;
+            const property = id.replace('-header', ''); // Get property name from header ID
 
-                stats.forEach(player => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${player.Name}</td>
-                        <td>${player.PA}</td>
-                        <td>${player.BA}</td>
-                        <td>${player.xBA}</td>
-                        <td>${player.BA_diff}</td>
-                        <td>${player.SLG}</td>
-                        <td>${player.xSLG}</td>
-                        <td>${player.SLG_diff}</td>
-                        <td>${player.wOBA}</td>
-                        <td>${player.xwOBA}</td>
-                        <td>${player.wOBA_diff}</td>
-                        <td>${player.luck}</td>
-                    `;
-                    tableBody.appendChild(row);
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching player stats:', error);
+            sortOrder[property] = 1; // Default sort order
+            header.addEventListener('click', () => {
+                sortOrder[property] *= -1; // Toggle sort order
+                fetchPlayerStats(property);
             });
-    }
+        })
 
-    fetchPlayerStats();
+        // Function to fetch player stats and populate the table
+        function fetchPlayerStats(sortProperty) {
+            fetch('/getPlayerStats')
+                .then(response => response.json())
+                .then(stats => {
+                    // Create a row for each player
+                    const rows = stats.map(player => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                    <td>${player.Name}</td>
+                    <td>${player.PA}</td>
+                    <td>${player.BA}</td>
+                    <td>${player.xBA}</td>
+                    <td>${player.BA_diff}</td>
+                    <td>${player.SLG}</td>
+                    <td>${player.xSLG}</td>
+                    <td>${player.SLG_diff}</td>
+                    <td>${player.wOBA}</td>
+                    <td>${player.xwOBA}</td>
+                    <td>${player.wOBA_diff}</td>
+                    <td>${player.luck}</td>
+                `;
+                        row.dataset[sortProperty] = player[sortProperty]; // Store the property value in a data attribute
+                        return row;
+                    });
+
+                    // Sort the rows based on the property
+                    if (sortProperty) {
+                        const order = sortOrder[sortProperty];
+                        rows.sort((a, b) => {
+                            const aValue = parseFloat(a.dataset[sortProperty]);
+                            const bValue = parseFloat(b.dataset[sortProperty]);
+                            return order * (aValue - bValue);
+                        });
+                    }
+
+                    // Add the sorted rows to the table
+                    const tableBody = document.getElementById('player-stats-body');
+                    tableBody.innerHTML = '';
+                    rows.forEach(row => tableBody.appendChild(row));
+                })
+                .catch(error => {
+                    console.error('Error fetching player stats:', error);
+                });
+        }
+
+        fetchPlayerStats('Name');
+    });
 </script>
 </body>
 </html>
